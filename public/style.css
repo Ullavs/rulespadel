@@ -6,16 +6,13 @@
     #da62c4 30%,
     white 60%
   );
+  --font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
 html {
-  font-family: system-ui, sans-serif;
+  font-family: var(--font-family);
   background-color: #f6f6f6;
-}
-
-code {
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
 .link-card {
@@ -62,8 +59,9 @@ p {
 main {
   margin: auto;
   padding: 1.5rem;
-  max-width: 60ch;
+  max-width: 70ch;
 }
+
 h1 {
   font-size: 3rem;
   font-weight: 800;
