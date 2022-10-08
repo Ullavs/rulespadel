@@ -2,7 +2,7 @@
 
 ## 🚀 Project Structure
 
-this site is built with [Astro](https://astro.build)
+This website is built with [Astro](https://astro.build)
 
 ## 🧞 Commands
 
@@ -19,4 +19,4 @@ All commands are run from the root of the project, from a terminal:
 
 ## 👀 Want to learn more?
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Feel free to check [Astro documentation](https://docs.astro.build) or jump into their [Discord server](https://astro.build/chat).
