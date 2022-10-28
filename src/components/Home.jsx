@@ -19,8 +19,6 @@ export function Home() {
         and scrambled it to make a type specimen book. <code>src/pages</code> in
         your project.
         <br />
-        <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message
-        above.
       </p>
       <ul role="list" className="link-card-grid">
         <Card

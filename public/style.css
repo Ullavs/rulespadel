@@ -1,9 +1,9 @@
 :root {
-  --accent: 124, 58, 237;
+  --accent: 283, 145, 69;
   --accent-gradient: linear-gradient(
     45deg,
     rgb(var(--accent)),
-    #da62c4 30%,
+    #d66734 30%,
     white 60%
   );
   --font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
@@ -39,6 +39,7 @@ html {
   background-color: white;
   opacity: 0.8;
 }
+
 h2 {
   margin: 0;
   font-size: 1.25rem;
@@ -59,7 +60,7 @@ p {
 main {
   margin: auto;
   padding: 1.5rem;
-  max-width: 70ch;
+  max-width: 75ch;
 }
 
 h1 {
@@ -100,10 +101,10 @@ h1 {
   padding: 0;
 }
 
-.test-button {
+/* .test-button {
   background-color: orange;
   color: white;
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 0.5rem;
-}
+} */
