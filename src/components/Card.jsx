@@ -2,11 +2,11 @@ import React from "react";
 
 export function Card({ href, title, body }) {
   return (
-    <li className="link-card">
+    <li className="card">
       <a href={href}>
         <h2>
           {title}
-          <span>&rarr;</span>
+          <span> &rarr;</span>
         </h2>
         <p>{body}</p>
       </a>
