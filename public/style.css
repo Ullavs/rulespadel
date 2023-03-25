@@ -108,6 +108,17 @@ p {
   color: #444;
 }
 
+.container-home-link {
+  margin-top: 1rem;
+}
+
+.home-link {
+  padding-top: 5rem;
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.8rem;
+}
+
 .box {
   line-height: 1.6;
   margin: 1rem 0;
