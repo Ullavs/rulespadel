@@ -10,12 +10,56 @@
     DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   font-family: var(--font-family);
   background-color: #f6f6f6;
 }
 
-.link-card {
+main {
+  margin: auto;
+  padding-block: 1.5rem;
+  max-width: 75ch;
+  display: grid;
+  min-height: 100dvh;
+  grid-template-rows: auto 1fr auto;
+}
+
+.header-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  border-radius: 50%;
+  width: 150px;
+  height: auto;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.text-gradient {
+  background-image: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 400%;
+  background-position: 0%;
+}
+
+.card {
   list-style: none;
   display: flex;
   padding: 0.15rem;
@@ -29,7 +73,7 @@ html {
     0 2px 4px -2px rgba(0, 0, 0, 0.1);
 }
 
-.link-card > a {
+.card > a {
   width: 100%;
   text-decoration: none;
   line-height: 1.4;
@@ -40,42 +84,31 @@ html {
   opacity: 0.8;
 }
 
-h2 {
-  margin: 0;
-  font-size: 1.25rem;
-  transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-}
-p {
-  margin-top: 0.5rem;
-  margin-bottom: 0;
-  color: #444;
-}
-.link-card:is(:hover, :focus-within) {
+.card:is(:hover, :focus-within) {
   background-position: 0;
 }
-.link-card:is(:hover, :focus-within) h2 {
+.card:is(:hover, :focus-within) h2 {
   color: rgb(var(--accent));
 }
 
-main {
-  margin: auto;
-  padding: 1.5rem;
-  max-width: 75ch;
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+  gap: 1rem;
+  padding: 0;
 }
 
-h1 {
-  font-size: 3rem;
-  font-weight: 800;
-  margin: 0;
+h2 {
+  font-size: 1.25rem;
+  transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
-.text-gradient {
-  background-image: var(--accent-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 400%;
-  background-position: 0%;
+
+p {
+  margin-top: 0.5rem;
+  color: #444;
 }
-.instructions {
+
+.box {
   line-height: 1.6;
   margin: 1rem 0;
   border: 1px solid rgba(var(--accent), 25%);
@@ -83,28 +116,7 @@ h1 {
   padding: 1rem;
   border-radius: 0.4rem;
 }
-.instructions code {
-  font-size: 0.875em;
-  font-weight: bold;
-  background: rgba(var(--accent), 12%);
-  color: rgb(var(--accent));
-  border-radius: 4px;
-  padding: 0.3em 0.45em;
-}
-.instructions strong {
-  color: rgb(var(--accent));
-}
-.link-card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-  gap: 1rem;
-  padding: 0;
-}
 
-/* .test-button {
-  background-color: orange;
-  color: white;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 0.5rem;
-} */
+.footer {
+  text-align: center;
+}
