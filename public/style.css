@@ -42,7 +42,7 @@ main {
 
 .logo {
   border-radius: 50%;
-  width: 150px;
+  width: 120px;
   height: auto;
 }
 
@@ -118,25 +118,25 @@ p {
 }
 
 .container-home-link {
-  margin-top: 1rem;
+  margin-block: 1rem;
 }
 
 .home-link {
-  padding-top: 5rem;
   text-decoration: none;
   color: inherit;
   font-size: 0.8rem;
 }
 
 .box {
-  line-height: 1.6;
-  margin: 1rem 0;
+  line-height: 1.2;
+  margin: 0.5rem 0;
   border: 1px solid rgba(var(--accent), 25%);
   background-color: white;
-  padding: 1rem;
+  padding: 0.8rem;
   border-radius: 0.4rem;
 }
 
 .footer {
+  margin-top: 2rem;
   text-align: center;
 }
