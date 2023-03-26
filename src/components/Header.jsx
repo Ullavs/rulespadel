@@ -1,20 +1,24 @@
 import React from "react";
+import { BackHome } from "./BackHome";
 
-export function Header({ title, subtitle }) {
+export function Header({ title, subtitle, showBackHome }) {
   return (
-    <a className="header-link" href="/">
-      <img
-        className="logo"
-        src="public\logo-rulespadel.webp"
-        width="2048"
-        height="2048"
-      />
-      <div>
-        <h1>
-          <span className="text-gradient">{title}</span>
-        </h1>
-        <h2>{subtitle}</h2>
-      </div>
-    </a>
+    <header>
+      <a className="header-link" href="/">
+        <img
+          className="logo"
+          src="public\logo-rulespadel.webp"
+          width="512"
+          height="512"
+        />
+        <div>
+          <h1>
+            <span className="text-gradient">{title}</span>
+          </h1>
+          <h2>{subtitle}</h2>
+        </div>
+      </a>
+      {showBackHome && <BackHome />}
+    </header>
   );
 }

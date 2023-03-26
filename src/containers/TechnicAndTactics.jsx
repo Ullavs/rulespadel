@@ -1,15 +1,15 @@
 import React from "react";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
-import { ContentContainer } from "../components/ContentContainer";
-import { BackHome } from "../components/BackHome";
+import { Content } from "../components/Content";
 
 export function TechnicAndTactics() {
   return (
     <main>
-      <Header title="Techniek en tactiek" />
-      <BackHome />
-      <ContentContainer />
+      <Header title="Techniek en tactiek" showBackHome />
+      <div>
+        <Content />
+      </div>
       <Footer />
     </main>
   );
