@@ -51,6 +51,15 @@ h1 {
   font-weight: 800;
 }
 
+.language-switcher {
+  font-family: var(--font-family);
+  width: 200px;
+  height: 50px;
+  border-radius: 8px;
+  border: none;
+  background-color: white;
+}
+
 .text-gradient {
   background-image: var(--accent-gradient);
   -webkit-background-clip: text;
