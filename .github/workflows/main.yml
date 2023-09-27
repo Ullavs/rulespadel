@@ -12,13 +12,10 @@ jobs:
     steps:
       - name: Checkout latest code 🚚
         uses: actions/checkout@v3
-      - uses: oven-sh/setup-bun@v1
-        with:
-          bun-version: latest
       - name: Install dependencies ⏳
-        run: bun install --frozen-lockfile
+        run: npm install --frozen-lockfile
       - name: Build website 👷‍♀️
-        run: bun run build
+        run: npm run build
       - name: Install SSH Key 🔑
         uses: shimataro/ssh-key-action@v2
         with:
