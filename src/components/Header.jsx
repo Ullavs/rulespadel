@@ -1,5 +1,5 @@
-import React from "react";
-import { BackHome } from "./BackHome";
+import React from "react"
+import { BackHome } from "./BackHome"
 
 export function Header({ title, subtitle, showBackHome }) {
   return (
@@ -7,7 +7,7 @@ export function Header({ title, subtitle, showBackHome }) {
       <a className="header-link" href="/">
         <img
           className="logo"
-          src="public\logo-rulespadel.webp"
+          src="/logo-rulespadel.webp"
           width="512"
           height="512"
         />
@@ -20,5 +20,5 @@ export function Header({ title, subtitle, showBackHome }) {
       </a>
       {showBackHome && <BackHome />}
     </header>
-  );
+  )
 }
