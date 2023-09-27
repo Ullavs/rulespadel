@@ -1,0 +1,30 @@
+name: Deploy 🚀
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Do it 💪
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout latest code 🚚
+        uses: actions/checkout@v3
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+      - name: Install dependencies ⏳
+        run: bun install --frozen-lockfile
+      - name: Build website 👷‍♀️
+        run: bun run build
+      - name: Install SSH Key 🔑
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          known_hosts: "just-a-placeholder-so-we-dont-get-errors"
+      - name: Adding Known Hosts 💾
+        run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+      - name: Deploy with rsync 💨
+        run: rsync -avz --delete .dist/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/rulespadel.nl/html/
